@@ -5,13 +5,19 @@ insert them into the template and return it */
 const readmeTemplate = (...data) => {
     //console.log(data);
     const [title, shortDescription, description] = data[0];
-    // console.log(title);
-    // console.log(description);
-    let templateData = '';
-
+    const ph = 'Enter text here';
+    const top = `<p align="right">(<a href="#readme-top">back to top</a>)</p>`;
+    let templateData = `<a name="readme-top"></a>\n`;
     templateData += `# ${title}\n\n`;
-    templateData += `${shortDescription}\n\n`
-    templateData += `## Description\n\n${description}`;
+    templateData += `${shortDescription}\n\n`;
+    templateData += `## Description\n\n${description}\n${top}\n\n`;
+    templateData += `## Table of Contents\n\n${ph}\n${top}\n\n`;
+    templateData += `## Installation\n\n${ph}\n${top}\n\n`;
+    templateData += `## Usage\n\n${ph}\n${top}\n\n`;
+    templateData += `## Contributing\n\n${ph}\n${top}\n\n`;
+    templateData += `## Tests\n\n${ph}\n${top}\n\n`;
+    templateData += `## Questions\n\n${ph}\n${top}\n\n`;
+    templateData += `## License\n\n${ph}\n${top}\n\n`;
 
     return templateData;
 
