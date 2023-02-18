@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
-# README Generator
+# odaofdnofa
 
-A simple README generator
+onodanfonds
 
 ## Description
 
-Node.js app to generate professional readme for you next project
+odnoanfdos
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Table of Contents
@@ -15,7 +15,13 @@ Enter text here
 
 ## Installation
 
-<ol><li>`clone repo`</li><li>`npm install`</li></ol>
+`1. one`
+
+`2. two`
+
+`3. three`
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage

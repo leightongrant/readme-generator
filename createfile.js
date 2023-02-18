@@ -9,11 +9,13 @@ const readmeTemplate = (...data) => {
 
     // Install details
     let instDet = '';
+    let n = 1;
     if (inst.split(',') === 1) {
-        instDet = inst[0];
+        instDet = `\`${n}. inst[0].trim()\``;
     } else {
         inst.split(',').forEach(i => {
-            instDet += `<li>\`${i.trim()}\`</li>`;
+            instDet += `\`${n}. ${i.trim()}\`\n\n`;
+            n++;
         });
     }
 
@@ -33,7 +35,7 @@ const readmeTemplate = (...data) => {
     templateData += `${sdesc}\n\n`;
     templateData += `## Description\n\n${desc}\n${top}\n\n`;
     templateData += `## Table of Contents\n\n${ph}\n${top}\n\n`;
-    templateData += `## Installation\n\n<ol>${instDet}</ol>\n${top}\n\n`;
+    templateData += `## Installation\n\n${instDet}\n${top}\n\n`;
     templateData += `## Usage\n\n${ph}\n${top}\n\n`;
     templateData += `## Contributing\n\n${ph}\n${top}\n\n`;
     templateData += `## Tests\n\n${ph}\n${top}\n\n`;
