@@ -4,10 +4,11 @@ import fs from 'fs';
 insert them into the template and return it */
 const readmeTemplate = (...data) => {
     //Questions Data
-    const { lic, title, sdesc, desc, inst, usg } = data[0];
+    const { lic, title, sdesc, desc, inst, usg, contrib } = data[0];
     //console.log(data);
 
     // Install details
+    const instDes = 'To install this app follow the steps below';
     let instDet = '';
     let n = 1;
     if (inst.split(',') === 1) {
@@ -20,12 +21,24 @@ const readmeTemplate = (...data) => {
     }
 
     // Usage details
+    const usgDesc = 'Follow the steps below to use this app';
     let usgDet = '';
     if (usg.split(',') === 1) {
         usgDet = `* ${usg[0].trim()}`;
     } else {
         usg.split(',').forEach(i => {
             usgDet += `* ${i.trim()}\n`;
+        });
+    }
+
+    // Contribution details
+    const contribDesc = 'Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.';
+    let contribDet = '';
+    if (contrib.split(',') === 1) {
+        contribDet = `* ${usg[0].trim()}`;
+    } else {
+        contrib.split(',').forEach(i => {
+            contribDet += `* ${i.trim()}\n`;
         });
     }
 
@@ -45,16 +58,16 @@ const readmeTemplate = (...data) => {
     }
 
 
-    const ph = 'Enter text here';
+    const ph = 'N/A';
     const top = `<p align="right">(<a href="#readme-top">back to top</a>)</p>`;
     let templateData = `<a name="readme-top"></a>\n`;
     templateData += `# ${title}\n\n`;
     templateData += `${sdesc}\n\n`;
     templateData += `## Description\n\n${desc}\n${top}\n\n`;
     templateData += `## Table of Contents\n\n${toc}\n${top}\n\n`;
-    templateData += `## Installation\n\n${instDet}\n${top}\n\n`;
-    templateData += `## Usage\n\n${usgDet}\n${top}\n\n`;
-    templateData += `## Contributing\n\n${ph}\n${top}\n\n`;
+    templateData += `## Installation\n\n${instDes}\n\n${instDet}\n${top}\n\n`;
+    templateData += `## Usage\n\n${usgDesc}\n\n${usgDet}\n${top}\n\n`;
+    templateData += `## Contributing\n\n${contribDesc}\n\n${contribDet}\n${top}\n\n`;
     templateData += `## Tests\n\n${ph}\n${top}\n\n`;
     templateData += `## Questions\n\n${ph}\n${top}\n\n`;
     templateData += `## License\n\n${licTxt}\n${top}\n\n`;

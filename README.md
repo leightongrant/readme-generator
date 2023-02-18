@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
-# this is a test
+# Readme Generator
 
-this is a test
+App to generate a readme
 
 ## Description
 
-this is a test
+This app will generate a professional readme for your next project. Just follow the prompts and enter all the required information
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Table of Contents
@@ -21,36 +21,45 @@ this is a test
 
 ## Installation
 
-`1. tes`
+To install this app follow the steps below
 
-`2. test`
+`1. Clone repository`
 
-`3. testing`
+`2. npm install - to download dependencies`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
-* tes
-* test
-* testing
+Follow the steps below to use this app
+
+* node index.js
+* follow prompts
+* check folder for newly generated file
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
-Enter text here
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+* Fork the project
+* Create your feature branch
+* Commit your changes
+* Push to branch
+* Open a pull request
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Tests
 
-Enter text here
+N/A
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Questions
 
-Enter text here
+N/A
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
