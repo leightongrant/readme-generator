@@ -4,7 +4,7 @@ import fs from 'fs';
 insert them into the template and return it */
 const readmeTemplate = (...data) => {
     //Questions Data
-    const { lic, title, sdesc, desc, inst } = data[0];
+    const { lic, title, sdesc, desc, inst, usg } = data[0];
     //console.log(data);
 
     // Install details
@@ -19,12 +19,29 @@ const readmeTemplate = (...data) => {
         });
     }
 
+    // Usage details
+    let usgDet = '';
+    if (usg.split(',') === 1) {
+        usgDet = `* ${usg[0].trim()}`;
+    } else {
+        usg.split(',').forEach(i => {
+            usgDet += `* ${i.trim()}\n`;
+        });
+    }
+
     // Check for choses license
     let licTxt = '';
     if (lic === 'None') {
         licTxt = 'None';
     } else {
         licTxt = `Distributed under the ${lic} License. See \`LICENSE.txt\` for more information.`;
+    }
+
+    // Table of contents
+    const tocArr = ['Installation', 'Usage', 'Contributing', 'Tests', 'Questions', 'License'];
+    let toc = '';
+    for (const i of tocArr) {
+        toc += `* <a href="#${i.toLowerCase()}">${i}</a>\n`;
     }
 
 
@@ -34,9 +51,9 @@ const readmeTemplate = (...data) => {
     templateData += `# ${title}\n\n`;
     templateData += `${sdesc}\n\n`;
     templateData += `## Description\n\n${desc}\n${top}\n\n`;
-    templateData += `## Table of Contents\n\n${ph}\n${top}\n\n`;
+    templateData += `## Table of Contents\n\n${toc}\n${top}\n\n`;
     templateData += `## Installation\n\n${instDet}\n${top}\n\n`;
-    templateData += `## Usage\n\n${ph}\n${top}\n\n`;
+    templateData += `## Usage\n\n${usgDet}\n${top}\n\n`;
     templateData += `## Contributing\n\n${ph}\n${top}\n\n`;
     templateData += `## Tests\n\n${ph}\n${top}\n\n`;
     templateData += `## Questions\n\n${ph}\n${top}\n\n`;
