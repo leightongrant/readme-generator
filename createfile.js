@@ -3,21 +3,42 @@ import fs from 'fs';
 /* This function will take some data parameters,
 insert them into the template and return it */
 const readmeTemplate = (...data) => {
+    //Questions Data
+    const { lic, title, sdesc, desc, inst } = data[0];
     //console.log(data);
-    const [title, shortDescription, description] = data[0];
+
+    // Install details
+    let instDet = '';
+    if (inst.split(',') === 1) {
+        instDet = inst[0];
+    } else {
+        inst.split(',').forEach(i => {
+            instDet += `<li>\`${i.trim()}\`</li>`;
+        });
+    }
+
+    // Check for choses license
+    let licTxt = '';
+    if (lic === 'None') {
+        licTxt = 'None';
+    } else {
+        licTxt = `Distributed under the ${lic} License. See \`LICENSE.txt\` for more information.`;
+    }
+
+
     const ph = 'Enter text here';
     const top = `<p align="right">(<a href="#readme-top">back to top</a>)</p>`;
     let templateData = `<a name="readme-top"></a>\n`;
     templateData += `# ${title}\n\n`;
-    templateData += `${shortDescription}\n\n`;
-    templateData += `## Description\n\n${description}\n${top}\n\n`;
+    templateData += `${sdesc}\n\n`;
+    templateData += `## Description\n\n${desc}\n${top}\n\n`;
     templateData += `## Table of Contents\n\n${ph}\n${top}\n\n`;
-    templateData += `## Installation\n\n${ph}\n${top}\n\n`;
+    templateData += `## Installation\n\n<ol>${instDet}</ol>\n${top}\n\n`;
     templateData += `## Usage\n\n${ph}\n${top}\n\n`;
     templateData += `## Contributing\n\n${ph}\n${top}\n\n`;
     templateData += `## Tests\n\n${ph}\n${top}\n\n`;
     templateData += `## Questions\n\n${ph}\n${top}\n\n`;
-    templateData += `## License\n\n${ph}\n${top}\n\n`;
+    templateData += `## License\n\n${licTxt}\n${top}\n\n`;
 
     return templateData;
 

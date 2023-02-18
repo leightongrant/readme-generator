@@ -12,18 +12,31 @@ inquirer
     },
     {
       type: 'input',
-      name: 'shortdescription',
+      name: 'sdesc',
       message: 'Enter a short description of your project >> '
     },
     {
       type: 'input',
-      name: 'description',
+      name: 'desc',
       message: 'Describe your project in more detail >> '
-    }
+    },
+    {
+      type: 'input',
+      name: 'inst',
+      message: 'List install details, seperate each with a comma >> '
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'Choose a license >> ',
+      choices: ['None', 'MIT', 'Apache-2', 'GPL', 'BSD', 'ISC'],
+      default: 'MIT'
+    },
   ])
   .then((r) => {
     // Use user feedback for... whatever!!
-    const answers = [r.title, r.shortdescription, r.description];
+    const answers = { title: r.title, sdesc: r.sdesc, desc: r.desc, lic: r.license, inst: r.inst };
+    // const ans = r.license;
     //readmeTemplate(answers);
     createFile(readmeTemplate(answers));
   })
@@ -33,7 +46,7 @@ inquirer
       console.error(error);
     } else {
       // Something else went wrong
-      console.log('Something went wrong');
+      console.error(error);
     }
   });
 

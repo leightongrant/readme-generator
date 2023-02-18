@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
-# A Readme generator
+# README Generator
 
-App to generate readme
+A simple README generator
 
 ## Description
 
-App built with node.js to generate a professional readme for your next project
+Node.js app to generate professional readme for you next project
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Table of Contents
@@ -15,7 +15,7 @@ Enter text here
 
 ## Installation
 
-Enter text here
+<ol><li>`clone repo`</li><li>`npm install`</li></ol>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
@@ -40,6 +40,6 @@ Enter text here
 
 ## License
 
-Enter text here
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
