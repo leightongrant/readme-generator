@@ -8,39 +8,63 @@ const questions = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your project >> ',
-            validate: validate,
+            message: 'Enter project your title or press enter to use repository name >> ',
         },
         {
             type: 'input',
-            name: 'sdesc',
-            message: 'Enter a short description of your project >> ',
-            validate: validate
+            name: 'shortDescription',
+            message: 'Enter a short description of your project or press enter to use default>> ',
         },
+
         {
             type: 'input',
-            name: 'desc',
+            name: 'description',
             message: 'Describe your project in more detail >> '
         },
         {
             type: 'input',
-            name: 'inst',
-            message: 'Enter step by step details of how to install your app.\nSeperate each step with a comma >> '
+            name: 'installationIntro',
+            message: 'Enter intro for installation section or press enter to use default >> '
         },
         {
             type: 'input',
-            name: 'usg',
-            message: 'Enter step by step details of how to use your app.\nSeperate each step with a comma >> '
+            name: 'installation',
+            message: 'Enter step by step details of how to install your app, eperate each step with a comma. If not required press enter to continue >> '
         },
         {
             type: 'input',
-            name: 'contrib',
-            message: 'Enter step by step details of how to contribute to your app.\nSeperate each step with a comma >> '
+            name: 'usageIntro',
+            message: 'Enter intro for usage section or press enter to use default >> '
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Enter step by step details of how to use your app, seperate each step with a comma. If not required press enter to continue >> '
+        },
+        {
+            type: 'input',
+            name: 'contributionIntro',
+            message: 'Enter intro for contributions section or press enter to use default >> '
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Enter step by step details of how to contribute to your app, seperate each step with a comma. If not required press enter to continue >> '
+        },
+        {
+            type: 'input',
+            name: 'testIntro',
+            message: 'Enter intro for tests section or press enter to use default >> '
         },
         {
             type: 'input',
             name: 'test',
-            message: 'Enter tests that a user can run.\nSeperate each test with a comma >> '
+            message: 'Enter tests that a user can run, seperate each test with a comma. If not required press enter to continue >> '
+        },
+        {
+            type: 'input',
+            name: 'questionsIntro',
+            message: 'Enter intro for questions section or press enter to use default >> '
         },
         {
             type: 'input',
@@ -49,7 +73,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'githubname',
+            name: 'githubName',
             message: 'Enter your GitHub username >> '
         },
         {
