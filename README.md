@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
-# Readme Generator
+# README Generator
 
-App to generate a readme
+App to generate a README
 
 ## Description
 
-This app will generate a professional readme for your next project. Just follow the prompts and enter all the required information
+This app will generate a professional README for your next project. Follow the prompts and enter all required information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Table of Contents
@@ -23,9 +23,9 @@ This app will generate a professional readme for your next project. Just follow 
 
 To install this app follow the steps below
 
-`1. Clone repository`
+`1. git clone [repo] - To clone repository`
 
-`2. npm install - to download dependencies`
+`2. npm install - To download dependencies`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -35,8 +35,9 @@ To install this app follow the steps below
 Follow the steps below to use this app
 
 * node index.js
-* follow prompts
-* check folder for newly generated file
+* Follow the prompts
+* Enter required info
+* Check folder for README
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,7 +55,11 @@ Contributions are what make the open source community such an amazing place to l
 
 ## Tests
 
-N/A
+To run test type the following command/s
+
+`npm test`
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Questions
