@@ -51,7 +51,7 @@ const readmeTemplate = (...data) => {
     let templateData = `<a name="readme-top"></a>\n`;
     templateData += `# ${title}\n\n`;
     templateData += `${shortDescription}\n\n\n`;
-    templateData += `\n\n![screenshot](${path})\n\n`;
+    templateData += `\n\n![screenshot]("${path}")\n\n`;
     // templateData += `## Description\n\n${desc}\n${top}\n\n`;
     templateData += `## Table of Contents\n\n${toc}\n${top}\n\n`;
     templateData += `## Installation\n\n${installationIntro}\n\n${installSteps}\n${top}\n\n`;

@@ -1,12 +1,10 @@
-<a name="readme-top"></a>
+
 # README-GENERATOR
 
 A README-GENERATOR project
 
+![screenshot](/mages/screenshot.png)
 
-
-
-![screenshot]()
 
 ## Table of Contents
 
