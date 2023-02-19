@@ -1,6 +1,6 @@
 // Validate function
 function validate (inp) {
-    return inp.trim().length !== 0 || 'You must enter a value to continue';
+    return inp.trim().length !== 0 || 'You must enter details to continue';
 }
 
 const questions = () => {
@@ -19,7 +19,8 @@ const questions = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Describe your project in more detail >> '
+            message: 'Describe your project in more detail >> ',
+            validate: validate
         },
         {
             type: 'input',

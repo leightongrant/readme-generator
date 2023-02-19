@@ -25,10 +25,8 @@ inquirer
       githubName: data.githubName.trim(),
       path: data.path.trim(),
     };
-    //readmeTemplate(answers);
+    // Create README with template and data
     createFile(readmeTemplate(answers));
-    //console.table(answers);
-
   })
   .catch((error) => {
     if (error.isTtyError) {

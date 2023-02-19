@@ -51,8 +51,7 @@ const readmeTemplate = (...data) => {
     let templateData = `<a name="readme-top"></a>\n`;
     templateData += `# ${title}\n\n`;
     templateData += `${shortDescription}\n\n\n`;
-    templateData += `\n\n![screenshot]("${path}")\n\n`;
-    // templateData += `## Description\n\n${desc}\n${top}\n\n`;
+    templateData += `## Description\n\n${description}\n${top}\n\n`;
     templateData += `## Table of Contents\n\n${toc}\n${top}\n\n`;
     templateData += `## Installation\n\n${installationIntro}\n\n${installSteps}\n${top}\n\n`;
     templateData += `## Usage\n\n${usageIntro}\n\n${usageSteps}\n${top}\n\n`;
@@ -60,6 +59,8 @@ const readmeTemplate = (...data) => {
     templateData += `## Tests\n\n${testIntro}\n\n${testSteps}\n${top}\n\n`;
     templateData += `## Questions\n\n${questionsIntro}\n\n${directContact}\n\n${githubDetails}\n${top}\n\n`;
     templateData += `## License\n\n${licenseDetails}\n${top}\n\n`;
+    templateData += `## Screenshot\n\n`;
+    templateData += `![screenshot](${path})\n\n`;
 
     return templateData;
 
@@ -72,6 +73,7 @@ const createFile = (template, ...data) => {
     fs.writeFile('READMEtest.md', template, (err) => {
         if (err) console.error(err);
         console.info('Generating README...');
+        setTimeout(() => console.log('Done'), 2000);
     });
 };
 
