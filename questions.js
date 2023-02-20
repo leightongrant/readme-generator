@@ -1,6 +1,11 @@
 // Validate function
-function validate (inp) {
-    return inp.trim().length !== 0 || 'You must enter details to continue';
+function validate (input) {
+    return input.trim().length !== 0 || 'You must enter details to continue';
+}
+
+function validateEmail (email) {
+    const re = /^[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}$/i;
+    return re.test(email) || 'Please enter a valid email address';
 }
 
 const questions = () => {
@@ -70,7 +75,8 @@ const questions = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'Enter your email address >> '
+            message: 'Enter your email address >> ',
+            validate: validateEmail
         },
         {
             type: 'input',
