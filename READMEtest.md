@@ -65,6 +65,7 @@ Find more info about my work at [misterouija](https://github.com/misterouija/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
+![GitHub license](https://img.shields.io/badge/license-NONE-blue.svg)
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

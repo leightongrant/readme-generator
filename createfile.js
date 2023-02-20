@@ -40,11 +40,19 @@ const readmeTemplate = (...data) => {
 
     // Questions Section
     questionsIntro === '' ? questionsIntro = 'If you have any questions about the repo, open an issue or contact me directly.' : questionsIntro;
-    const directContact = `Contact me directly at ${email}`;
-    const githubDetails = `Find more info about my work at [${githubName}](https://github.com/${githubName}/)`;
+    const directContact = `Contact me directly at: ${email}`;
+    const githubDetails = `Find more info about my work at: [${githubName}](https://github.com/${githubName}/)`;
 
     // License Section
-    const licenseDetails = `Distributed under the ${license} License. See \`LICENSE.txt\` for more information.`;
+    const licenseBadge = `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    const licenseInfo = `Distributed under the ${license} License. See \`LICENSE.txt\` for more information.`;
+    let licenseDisplay = '';
+    license === 'NONE' ? licenseDisplay = licenseBadge : licenseDisplay = `${licenseBadge}\n\n${licenseInfo}`;
+
+    // Screenshot
+    let screenshotPath = '';
+    path === '' ? screenshotPath = `![screenshot](/images/screenshot.png)` : path;
+    path.toLowerCase() === 'n/a' ? screenshotPath = path.toUpperCase() : screenshotPath;
 
     // Build template with data
     const top = `<p align="right">(<a href="#readme-top">back to top</a>)</p>`;
@@ -58,9 +66,9 @@ const readmeTemplate = (...data) => {
     templateData += `## Contributing\n\n${contributionIntro}\n\n${contributionSteps}\n${top}\n\n`;
     templateData += `## Tests\n\n${testIntro}\n\n${testSteps}\n${top}\n\n`;
     templateData += `## Questions\n\n${questionsIntro}\n\n${directContact}\n\n${githubDetails}\n${top}\n\n`;
-    templateData += `## License\n\n${licenseDetails}\n${top}\n\n`;
+    templateData += `## License\n\n${licenseDisplay}\n${top}\n\n`;
     templateData += `## Screenshot\n\n`;
-    templateData += `![screenshot](${path})\n\n`;
+    templateData += `${screenshotPath}\n\n`;
 
     return templateData;
 
@@ -70,7 +78,7 @@ const readmeTemplate = (...data) => {
 and create a README file */
 
 const createFile = (template, ...data) => {
-    fs.writeFile('READMEtest.md', template, (err) => {
+    fs.writeFile('READMEtest1.md', template, (err) => {
         if (err) console.error(err);
         console.info('Generating README...');
         setTimeout(() => console.log('Done'), 2000);

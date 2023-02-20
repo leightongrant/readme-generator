@@ -13,54 +13,54 @@ const questions = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'Enter project your title or press enter to use repository name >> ',
+            message: 'Enter your Project Title or press enter to use repository name >> ',
         },
         {
             type: 'input',
             name: 'shortDescription',
-            message: 'Enter a short description of your project or press enter to use default>> ',
+            message: 'Enter a short description of your Project or press enter to use default>> ',
         },
 
         {
             type: 'input',
             name: 'description',
-            message: 'Describe your project in more detail >> ',
+            message: 'Describe your Project in more details >> ',
             validate: validate
         },
         {
             type: 'input',
             name: 'installationIntro',
-            message: 'Enter intro for installation section or press enter to use default >> '
+            message: 'Enter an intro for "Installation Section" or press enter to use default >> '
         },
         {
             type: 'input',
             name: 'installation',
-            message: 'Enter step by step details of how to install your app, eperate each step with a comma. If not required press enter to continue >> '
+            message: 'Enter step by step details of how to install your App, seperate each step with a comma. If not required press enter to continue >> '
         },
         {
             type: 'input',
             name: 'usageIntro',
-            message: 'Enter intro for usage section or press enter to use default >> '
+            message: 'Enter an intro for "Usage Section" or press enter to use default >> '
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Enter step by step details of how to use your app, seperate each step with a comma. If not required press enter to continue >> '
+            message: 'Enter step by step details of how to use your App, seperate each step with a comma. If not required press enter to continue >> '
         },
         {
             type: 'input',
             name: 'contributionIntro',
-            message: 'Enter intro for contributions section or press enter to use default >> '
+            message: 'Enter an intro for "Contributions Section" or press enter to use default >> '
         },
         {
             type: 'input',
             name: 'contribution',
-            message: 'Enter step by step details of how to contribute to your app, seperate each step with a comma. If not required press enter to continue >> '
+            message: 'Enter step by step details of how to contribute to your App, seperate each step with a comma. If not required press enter to continue >> '
         },
         {
             type: 'input',
             name: 'testIntro',
-            message: 'Enter intro for tests section or press enter to use default >> '
+            message: 'Enter an intro for "Tests Section" or press enter to use default >> '
         },
         {
             type: 'input',
@@ -70,7 +70,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'questionsIntro',
-            message: 'Enter intro for questions section or press enter to use default >> '
+            message: 'Enter an intro for "Questions Section" or press enter to use default >> '
         },
         {
             type: 'input',
@@ -81,18 +81,19 @@ const questions = () => {
         {
             type: 'input',
             name: 'githubName',
-            message: 'Enter your GitHub username >> '
+            message: 'Enter your GitHub username >> ',
+            validate: validate
         },
         {
             type: 'input',
             name: 'path',
-            message: 'Enter path to a screenshot >> '
+            message: 'Enter a path to a screenshot or save your screenshot to ./images/screenshot.png. If not required enter (n/a) or press enter to continue >> ',
         },
         {
             type: 'list',
             name: 'license',
             message: 'Choose a license, the default is MIT >> ',
-            choices: ['None', 'MIT', 'Apache-2', 'GPL', 'BSD', 'ISC'],
+            choices: ['NONE', 'MIT', 'APACHEv2', 'GPLv3', 'BSD', 'ISC'],
             default: 'MIT'
         },
     ];
