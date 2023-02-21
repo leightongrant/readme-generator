@@ -78,7 +78,7 @@ const readmeTemplate = (...data) => {
 and create a README file */
 
 const createFile = (template, ...data) => {
-    fs.writeFile('READMEtest1.md', template, (err) => {
+    fs.writeFile(process.argv[2], template, (err) => {
         if (err) console.error(err);
         console.info('Generating README...');
         setTimeout(() => console.log('Done'), 2000);
